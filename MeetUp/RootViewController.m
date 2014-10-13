@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "MeetUpDetailViewController.h"
 #import "MeetUp.h"
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -69,14 +70,23 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    //NSDictionary *meetUpDictionary = [self.meetUpsArray objectAtIndex:indexPath.row];
-    //NSDictionary *meetUpVenuDictionary = [NSDictionary dictionaryWithDictionary:[meetUpDictionary objectForKey:@"venue"]];
 
     MeetUp *meetUp = [self.meetUpsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = meetUp.name;
     cell.detailTextLabel.text = meetUp.address;
 
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
+    if ([segue.identifier isEqualToString:@"MeetUpDetail"])
+    {
+        MeetUpDetailViewController *meetUpDetailViewController = segue.destinationViewController;
+        meetUpDetailViewController.meetUp = [self.meetUpsArray objectAtIndex:indexPath.row];
+    }
 }
 
 @end

@@ -20,6 +20,7 @@
         self.hostName = [[eventDictionary objectForKey:@"group"] objectForKey:@"name"];
         self.address = [[eventDictionary objectForKey:@"venue"] objectForKey:@"address_1"];
         self.rsvpCount = [[eventDictionary objectForKey:@"yes_rsvp_count"] integerValue];
+        self.url = [NSURL URLWithString:[eventDictionary objectForKey:@"event_url"]];
     }
     return self;
 }

@@ -11,4 +11,6 @@
 
 @interface MeetUpDetailViewController : UIViewController
 
+@property MeetUp *meetUp;
+
 @end

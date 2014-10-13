@@ -15,6 +15,7 @@
 @property NSString *meetUpDescription;
 @property NSString *hostName;
 @property NSString *address;
+@property NSURL *url;
 
 -(instancetype)initWithDictionary: (NSDictionary *)eventDictionary;
 
