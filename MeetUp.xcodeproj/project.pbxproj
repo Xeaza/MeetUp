@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		3426017D19EC5073004B7989 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426017C19EC5073004B7989 /* main.m */; };
 		3426018019EC5073004B7989 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426017F19EC5073004B7989 /* AppDelegate.m */; };
-		3426018319EC5073004B7989 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426018219EC5073004B7989 /* ViewController.m */; };
+		3426018319EC5073004B7989 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426018219EC5073004B7989 /* RootViewController.m */; };
 		3426018619EC5073004B7989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3426018419EC5073004B7989 /* Main.storyboard */; };
 		3426018819EC5073004B7989 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3426018719EC5073004B7989 /* Images.xcassets */; };
 		3426018B19EC5073004B7989 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3426018919EC5073004B7989 /* LaunchScreen.xib */; };
 		3426019719EC5073004B7989 /* MeetUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426019619EC5073004B7989 /* MeetUpTests.m */; };
+		342601A219EC59AB004B7989 /* MeetUpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342601A119EC59AB004B7989 /* MeetUpDetailViewController.m */; };
+		342601A519EC5AEA004B7989 /* MeetUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 342601A419EC5AEA004B7989 /* MeetUp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		3426017C19EC5073004B7989 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3426017E19EC5073004B7989 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3426017F19EC5073004B7989 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3426018119EC5073004B7989 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3426018219EC5073004B7989 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3426018119EC5073004B7989 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3426018219EC5073004B7989 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		3426018519EC5073004B7989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3426018719EC5073004B7989 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3426018A19EC5073004B7989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3426019019EC5073004B7989 /* MeetUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3426019519EC5073004B7989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3426019619EC5073004B7989 /* MeetUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetUpTests.m; sourceTree = "<group>"; };
+		342601A019EC59AB004B7989 /* MeetUpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetUpDetailViewController.h; sourceTree = "<group>"; };
+		342601A119EC59AB004B7989 /* MeetUpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetUpDetailViewController.m; sourceTree = "<group>"; };
+		342601A319EC5AEA004B7989 /* MeetUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetUp.h; sourceTree = "<group>"; };
+		342601A419EC5AEA004B7989 /* MeetUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetUp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				3426017E19EC5073004B7989 /* AppDelegate.h */,
 				3426017F19EC5073004B7989 /* AppDelegate.m */,
-				3426018119EC5073004B7989 /* ViewController.h */,
-				3426018219EC5073004B7989 /* ViewController.m */,
+				3426018119EC5073004B7989 /* RootViewController.h */,
+				3426018219EC5073004B7989 /* RootViewController.m */,
+				342601A019EC59AB004B7989 /* MeetUpDetailViewController.h */,
+				342601A119EC59AB004B7989 /* MeetUpDetailViewController.m */,
+				342601A319EC5AEA004B7989 /* MeetUp.h */,
+				342601A419EC5AEA004B7989 /* MeetUp.m */,
 				3426018419EC5073004B7989 /* Main.storyboard */,
 				3426018719EC5073004B7989 /* Images.xcassets */,
 				3426018919EC5073004B7989 /* LaunchScreen.xib */,
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3426018319EC5073004B7989 /* ViewController.m in Sources */,
+				3426018319EC5073004B7989 /* RootViewController.m in Sources */,
+				342601A219EC59AB004B7989 /* MeetUpDetailViewController.m in Sources */,
+				342601A519EC5AEA004B7989 /* MeetUp.m in Sources */,
 				3426018019EC5073004B7989 /* AppDelegate.m in Sources */,
 				3426017D19EC5073004B7989 /* main.m in Sources */,
 			);

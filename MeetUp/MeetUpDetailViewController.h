@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MeetUpDetailViewController.h
 //  MeetUp
 //
 //  Created by Taylor Wright-Sanson on 10/13/14.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeetUp.h"
 
-@interface ViewController : UIViewController
-
+@interface MeetUpDetailViewController : UIViewController
 
 @end
-
