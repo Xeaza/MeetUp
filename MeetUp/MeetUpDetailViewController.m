@@ -7,11 +7,12 @@
 //
 
 #import "MeetUpDetailViewController.h"
+#import "WebViewController.h"
 
 @interface MeetUpDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *rsvpCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hostInfoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *meetUpDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextView *meetUpDescriptionTextField;
 
 @end
 
@@ -24,8 +25,18 @@
     self.navigationItem.title = self.meetUp.name;
     self.hostInfoLabel.text = [@"Host: " stringByAppendingString:self.meetUp.hostName];
     self.rsvpCountLabel.text = [@"RSVP Count: " stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)self.meetUp.rsvpCount]];
-    self.meetUpDescriptionLabel.text = self.meetUp.meetUpDescription;
+    self.meetUpDescriptionTextField.text = self.meetUp.meetUpDescription;
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"WebViewSegue"])
+    {
+        WebViewController *webViewController = segue.destinationViewController;
+        webViewController.meetUp = self.meetUp;
+    }
+}
 
 @end
