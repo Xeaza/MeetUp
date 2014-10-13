@@ -1,16 +1,16 @@
 //
-//  ViewController.m
+//  RootTableViewController.m
 //  MeetUp
 //
 //  Created by Taylor Wright-Sanson on 10/13/14.
 //  Copyright (c) 2014 Taylor Wright-Sanson. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "RootTableViewController.h"
 #import "MeetUpDetailViewController.h"
 #import "MeetUp.h"
 
-@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating>
+@interface RootTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property NSMutableArray *meetUpsArray;
 @property NSMutableArray *searchResults;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation RootViewController
+@implementation RootTableViewController
 
 - (void)viewDidLoad
 {
@@ -28,7 +28,7 @@
 
     self.meetUpsArray = [[NSMutableArray alloc] init];
 
-      // Create a mutable array to contain products for the search results table.
+    // Create a mutable array to contain products for the search results table.
     self.searchResults = [[NSMutableArray alloc] init];
 
     UITableViewController *searchResultsController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -155,9 +155,9 @@
                 [self.searchResults addObject:meetUp];
             }
         }
-
+        
     }
-
+    
     [((UITableViewController *)self.searchController.searchResultsController).tableView reloadData];
 }
 
