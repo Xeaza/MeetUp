@@ -27,7 +27,8 @@
     self.member = [[NSMutableDictionary alloc] init];
 
     // Get the member information with the memberID that was passed from the comment selected in MeetUpDetailViewController
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://api.meetup.com/2/member/%@?&sign=true&photo-host=public&page=20&key=477d1928246a4e162252547b766d3c6d", self.memberID]]];
+    NSString *key = @"11744725b2c306e2d9711156454a12";
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://api.meetup.com/2/member/%@?&sign=true&photo-host=public&page=20&key=%@", self.memberID, key]]];
 
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
      {

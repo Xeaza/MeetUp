@@ -27,6 +27,7 @@
     // This line removes gap from tableivew that's ment to fit under navBar
     self.automaticallyAdjustsScrollViewInsets = NO;
 
+    NSString *key = @"11744725b2c306e2d9711156454a12";
     NSURL *url = [NSURL URLWithString:@"https://api.meetup.com/2/open_events.json?zip=60604&text=mobile&time=,1w&key=11744725b2c306e2d9711156454a12"];
     [self loadJSON:url];
 }

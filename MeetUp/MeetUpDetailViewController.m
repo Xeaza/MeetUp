@@ -38,7 +38,8 @@
     self.rsvpCountLabel.text = [@"RSVP Count: " stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)self.meetUp.rsvpCount]];
     [self.webView loadHTMLString:self.meetUp.meetUpDescription baseURL:nil];
 
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://api.meetup.com/2/event_comments?&sign=true&photo-host=public&group_id=%@&page=20&key=477d1928246a4e162252547b766d3c6d", self.meetUp.groupID]]];
+    NSString *key = @"11744725b2c306e2d9711156454a12";
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://api.meetup.com/2/event_comments?&sign=true&photo-host=public&group_id=%@&page=20&key=%@", self.meetUp.groupID, key]]];
 
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
     {
