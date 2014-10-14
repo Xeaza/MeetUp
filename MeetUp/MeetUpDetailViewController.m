@@ -12,7 +12,7 @@
 @interface MeetUpDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *rsvpCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hostInfoLabel;
-@property (weak, nonatomic) IBOutlet UITextView *meetUpDescriptionTextField;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -25,7 +25,7 @@
     self.navigationItem.title = self.meetUp.name;
     self.hostInfoLabel.text = [@"Host: " stringByAppendingString:self.meetUp.hostName];
     self.rsvpCountLabel.text = [@"RSVP Count: " stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)self.meetUp.rsvpCount]];
-    self.meetUpDescriptionTextField.text = self.meetUp.meetUpDescription;
+    [self.webView loadHTMLString:self.meetUp.meetUpDescription baseURL:nil];
 }
 
 #pragma mark - Navigation

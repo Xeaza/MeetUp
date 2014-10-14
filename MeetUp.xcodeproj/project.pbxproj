@@ -17,7 +17,6 @@
 		342601A219EC59AB004B7989 /* MeetUpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342601A119EC59AB004B7989 /* MeetUpDetailViewController.m */; };
 		342601A519EC5AEA004B7989 /* MeetUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 342601A419EC5AEA004B7989 /* MeetUp.m */; };
 		342601A819EC7428004B7989 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342601A719EC7428004B7989 /* WebViewController.m */; };
-		342601AB19EC90F7004B7989 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342601AA19EC90F7004B7989 /* RootTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +49,6 @@
 		342601A419EC5AEA004B7989 /* MeetUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetUp.m; sourceTree = "<group>"; };
 		342601A619EC7428004B7989 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		342601A719EC7428004B7989 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		342601A919EC90F7004B7989 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
-		342601AA19EC90F7004B7989 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +94,6 @@
 				3426017F19EC5073004B7989 /* AppDelegate.m */,
 				3426018119EC5073004B7989 /* RootViewController.h */,
 				3426018219EC5073004B7989 /* RootViewController.m */,
-				342601A919EC90F7004B7989 /* RootTableViewController.h */,
-				342601AA19EC90F7004B7989 /* RootTableViewController.m */,
 				342601A019EC59AB004B7989 /* MeetUpDetailViewController.h */,
 				342601A119EC59AB004B7989 /* MeetUpDetailViewController.m */,
 				342601A619EC7428004B7989 /* WebViewController.h */,
@@ -244,7 +239,6 @@
 				342601A219EC59AB004B7989 /* MeetUpDetailViewController.m in Sources */,
 				342601A519EC5AEA004B7989 /* MeetUp.m in Sources */,
 				3426018019EC5073004B7989 /* AppDelegate.m in Sources */,
-				342601AB19EC90F7004B7989 /* RootTableViewController.m in Sources */,
 				3426017D19EC5073004B7989 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
