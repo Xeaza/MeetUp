@@ -61,6 +61,12 @@
 - (void) checkIfWebViewCanGoForwardsOrBackwards
 {
     // Enable or disable the forward and backbuttons depending on the actions available
+
+    self.backButton.enabled = self.webView.canGoBack;
+    self.forwardButton.enabled = self.webView.canGoForward;
+
+    // The below is the same as the above two lines! 
+    /*
     if (self.webView.canGoBack)
     {
         self.backButton.enabled = YES;
@@ -78,6 +84,7 @@
     {
         self.forwardButton.enabled = NO;
     }
+     */
 }
 
 @end
