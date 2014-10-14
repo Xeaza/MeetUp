@@ -15,12 +15,13 @@
     self = [super init];
     if (self)
     {
-        self.name = [eventDictionary objectForKey:@"name"];
-        self.meetUpDescription = [eventDictionary objectForKey:@"description"];
-        self.hostName = [[eventDictionary objectForKey:@"group"] objectForKey:@"name"];
-        self.address = [[eventDictionary objectForKey:@"venue"] objectForKey:@"address_1"];
-        self.rsvpCount = [[eventDictionary objectForKey:@"yes_rsvp_count"] integerValue];
-        self.url = [NSURL URLWithString:[eventDictionary objectForKey:@"event_url"]];
+        self.name              = eventDictionary[@"name"];
+        self.meetUpDescription = eventDictionary[@"description"];
+        self.hostName          = eventDictionary[@"group"][@"name"];
+        self.address           = eventDictionary[@"venue"][@"address_1"];
+        self.rsvpCount         = [[eventDictionary objectForKey:@"yes_rsvp_count"] integerValue];
+        self.url               = [NSURL URLWithString:eventDictionary[@"event_url"]];
+        self.groupID           = eventDictionary[@"group"][@"id"];
     }
     return self;
 }

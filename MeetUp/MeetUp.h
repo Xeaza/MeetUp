@@ -16,6 +16,7 @@
 @property NSString *hostName;
 @property NSString *address;
 @property NSURL *url;
+@property NSString *groupID;
 
 -(instancetype)initWithDictionary: (NSDictionary *)eventDictionary;
 
