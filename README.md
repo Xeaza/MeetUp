@@ -8,4 +8,4 @@ Meetup API magic
 
 - View comments on each post returned from the API & a user profile for each comment poster.
 
-**UITableView, UIWebView, NSURLConnection
+**UITableView, UIWebView, NSURLConnection**
