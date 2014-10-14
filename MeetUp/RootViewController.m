@@ -54,19 +54,26 @@
              NSLog(@"JSON error: %@", jsonError.localizedDescription);
          }
 
-         NSDictionary *meetUpsJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-
-         NSArray *arrayOfMeetUpDictionaries =  [meetUpsJson objectForKey:@"results"];
-
-         // Loop through the local arrayOfMeetUpDictionaries and add make a meetup object out of each one and add it to self.meetUpsArray
-         // The MeetUp class takes care of parsing all the data
-         for (NSDictionary *meetUpDictionary in arrayOfMeetUpDictionaries)
+         if (data)
          {
-             MeetUp *meetUp = [[MeetUp alloc] initWithDictionary:meetUpDictionary];
-             [self.meetUpsArray addObject:meetUp];
-         }
+             NSDictionary *meetUpsJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
-         [self.tableView reloadData];
+             NSArray *arrayOfMeetUpDictionaries =  [meetUpsJson objectForKey:@"results"];
+
+             // Loop through the local arrayOfMeetUpDictionaries and add make a meetup object out of each one and add it to self.meetUpsArray
+             // The MeetUp class takes care of parsing all the data
+             for (NSDictionary *meetUpDictionary in arrayOfMeetUpDictionaries)
+             {
+                 MeetUp *meetUp = [[MeetUp alloc] initWithDictionary:meetUpDictionary];
+                 [self.meetUpsArray addObject:meetUp];
+             }
+             
+             [self.tableView reloadData];
+         }
+         else
+         {
+             NSLog(@"Meetup data fail");
+         }
      }];
 }
 

@@ -43,13 +43,20 @@
 
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
     {
-        NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        self.comments = results[@"results"];
-        [self.tableView reloadData];
-
-        for (NSDictionary *memberDict in self.comments)
+        if (data)
         {
-            [self.members addObject:[memberDict[@"member_id"] stringValue]];
+            NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.comments = results[@"results"];
+            [self.tableView reloadData];
+
+            for (NSDictionary *memberDict in self.comments)
+            {
+                [self.members addObject:[memberDict[@"member_id"] stringValue]];
+            }
+        }
+        else
+        {
+            NSLog(@"Meetup detail data fail");
         }
     }];
 }

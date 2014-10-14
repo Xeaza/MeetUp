@@ -36,23 +36,32 @@
 
          // Fill all the user's profile information.
          // City, state, photo, bio, interests
-         self.navigationItem.title = results[@"name"];
-         NSURL *imageUrl = [NSURL URLWithString:results[@"photo"][@"highres_link"]];
-         self.profilePicture.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
-         NSString *userState = results[@"state"];
-         NSString *userCity = results[@"city"];
-         self.locationLabel.text = [[userCity stringByAppendingString:@", "] stringByAppendingString:userState];
-         self.bioTextField.text = results[@"bio"];
-
-         NSArray *interestArray = results[@"topics"];
-         [interestArray componentsJoinedByString: @", "];
-         NSMutableArray *interests = [NSMutableArray array];
-         for (NSDictionary *interestDict in interestArray)
+         if (data)
          {
-             [interests  addObject:interestDict[@"name"]];
+             self.navigationItem.title = results[@"name"];
+             NSURL *imageUrl = [NSURL URLWithString:results[@"photo"][@"highres_link"]];
+             self.profilePicture.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
+             NSString *userState = results[@"state"];
+             NSString *userCity = results[@"city"];
+             self.locationLabel.text = [[userCity stringByAppendingString:@", "] stringByAppendingString:userState];
+             self.bioTextField.text = results[@"bio"];
+
+             NSArray *interestArray = results[@"topics"];
+             [interestArray componentsJoinedByString: @", "];
+             NSMutableArray *interests = [NSMutableArray array];
+             for (NSDictionary *interestDict in interestArray)
+             {
+                 [interests  addObject:interestDict[@"name"]];
+             }
+
+             self.interestsLabel.text = [interests componentsJoinedByString: @", "];
+         }
+         else
+         {
+             // alert user of error
+             NSLog(@"Member data fail:" );
          }
 
-         self.interestsLabel.text = [interests componentsJoinedByString: @", "];
 
      }];
 
